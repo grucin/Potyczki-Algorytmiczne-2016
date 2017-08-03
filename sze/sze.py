@@ -18,15 +18,15 @@ def sze(cores, input_tasks):
                     available_cores -= 1
                     if work > 1:
                         unfinished_tasks.append((
-                            tasks, start + 1, reserve, work - 1))
+                            task, start + 1, reserve, work - 1))
                 elif reserve == 0:
                     return 0
                 else:
                     unfinished_tasks.append((
-                        tasks, start + 1, reserve - 1, work))
+                        task, start + 1, reserve - 1, work))
             else:
                 unfinished_tasks.append((
-                    tasks, start, reserve, work))
+                    task, start, reserve, work))
 
         if not unfinished_tasks:
             break
