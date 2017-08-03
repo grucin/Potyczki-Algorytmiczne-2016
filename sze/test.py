@@ -19,6 +19,18 @@ class SzeTests(unittest.TestCase):
                 (5, 7, 2),
                 (4, 9, 4)
             )), 1)
+        
+    def test_kamil(self):
+        self.assertEqual(
+            sze(2, (
+                (0, 3, 1),
+                (0, 7, 3),
+                (1, 2, 1), 
+                (1, 2, 1),
+                (0, 1, 1),
+                (3, 6, 3),
+                (3, 6, 3)
+            )), 1)
 
     def test_fail(self):
         self.assertEqual(sze(1, ((0, 1, 1), (0, 1, 1))), 0)
